@@ -1,0 +1,60 @@
+{
+  
+    "Routes": [
+      {
+        "SwaggerKey": "product",
+        "DownstreamPathTemplate": "/api/product",
+        "DownstreamScheme": "https",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 7203
+          }
+        ],
+        "UpstreamPathTemplate": "/api/product",
+        "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      },
+      {
+        "SwaggerKey": "product",
+        "DownstreamPathTemplate": "/api/product/with-category",
+        "DownstreamScheme": "https",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 7203
+          }
+        ],
+        "UpstreamPathTemplate": "/product/with-category",
+        "UpstreamHttpMethod": [ "GET" ]
+      },
+      {
+        "SwaggerKey": "category",
+        "DownstreamPathTemplate": "/api/category",
+        "DownstreamScheme": "https",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 7200
+          }
+        ],
+        "UpstreamPathTemplate": "/category",
+        "UpstreamHttpMethod": [ "GET" ]
+      },
+      {
+        "SwaggerKey": "category",
+        "DownstreamPathTemplate": "/api/category/{id}",
+        "DownstreamScheme": "https",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 7200
+          }
+        ],
+        "UpstreamPathTemplate": "/category/{id}",
+        "UpstreamHttpMethod": [ "GET" ]
+      }
+    ],
+    "GlobalConfiguration": {
+      "BaseUrl": "https://localhost:9001"
+    }
+  }
